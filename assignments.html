@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go Touch Grass - Assignments</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #02280d;
+      margin: 0;
+    }
+
+    header, footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Hamburger menu */
+    .menu-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .menu-btn {
+      background-color: #1d5b3a;
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      background-color: #1d5b3a;
+      top: 50px;
+      left: 0;
+      width: 180px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 15px;
+    }
+
+    .menu a:hover {
+      background-color: #3fa76b;
+    }
+
+    .progress-container {
+      width: 90%;
+      background-color: #dcdcdc;
+      height: 25px;
+      border-radius: 10px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #2e8b57;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: width 0.4s ease;
+    }
+
+    /* Updated background colors */
+    section {
+      width: 85%;
+      margin: 20px auto;
+      background-color: #f5e6ca; /* Light tan */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e8b57;
+      border-bottom: 2px solid #2e8b57;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    details {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #e0cda9; /* Darker tan */
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    summary img {
+      width: 50px;
+      height: 50px;
+      margin-left: 15px;
+      border-radius: 8px;
+    }
+
+    .badge-info {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .badge-info img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .badge-date {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .modal-content img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .close-btn {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .close-btn:hover {
+      background-color: #3fa76b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu-container">
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <div class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="photos.html">Photos & Information</a>
+        <a href="assignments.html">Assignments</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </div>
+    <h1>Assignments</h1>
+    <p>Complete each task to earn achievements!</p>
+  </header>
+
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar">0%</div>
+  </div>
+
+  <!-- Lake Eola Trail Badges -->
+  <section>
+    <h2>Lake Eola Trail Badges</h2>
+    <details id="swan"><summary><input type="checkbox"> “Swan Lake” - Identify a swan <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Identify a swan on the Lake Eola trail.</p><p class="badge-date"></p></div></details>
+    <details id="fauna"><summary><input type="checkbox"> “Eola Fauna” - Observe wildlife at Lake Eola Loop <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Spot and observe wildlife around Lake Eola.</p><p class="badge-date"></p></div></details>
+    <details id="flora"><summary><input type="checkbox"> “Eola Flora” - Touch grass at Lake Eola Loop <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Touch the grass to earn your Flora badge!</p><p class="badge-date"></p></div></details>
+    <details id="art"><summary><input type="checkbox"> “Art Appreciator” - Find the Muse of Discovery and take a selfie <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Find and photograph the Muse of Discovery sculpture.</p><p class="badge-date"></p></div></details>
+    <details id="feed"><summary><input type="checkbox"> “Feed the Birds” - Feed birds at trail feeders <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Feed birds using food from approved feeders.</p><p class="badge-date"></p></div></details>
+    <details id="boat"><summary><input type="checkbox"> “Touch Water” - Rent a swan boat ($15) <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Rent and ride a swan boat at Lake Eola.</p><p class="badge-date"></p></div></details>
+    <details id="house"><summary><input type="checkbox"> “Visit Lake Eola House” <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Stop by the Lake Eola House and learn its history.</p><p class="badge-date"></p></div></details>
+    <details id="tg1"><summary><input type="checkbox"> “Touch Grass 1” - Complete all Eola achievements <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Complete all Lake Eola badges to earn this achievement.</p><p class="badge-date"></p></div></details>
+  </section>
+
+  <!-- Arboretum Trail Badges -->
+  <section>
+    <h2>Arboretum Trail Badges</h2>
+    <details id="tg2"><summary><input type="checkbox"> “Touch Grass 2” - Complete all Arboretum achievements <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Earned by completing all Arboretum Trail tasks.</p><p class="badge-date"></p></div></details>
+    <details id="waldo"><summary><input type="checkbox"> “Where’s Waldo?” – Find Kina’s dead body in the lake (💀) <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Locate the hidden Easter egg on the trail 😉</p><p class="badge-date"></p></div></details>
+    <details id="bear"><summary><input type="checkbox"> “Bear Country” – Bring a helmet <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Be prepared for any encounter on the trail — safety first!</p><p class="badge-date"></p></div></details>
+    <details id="logan"><summary><input type="checkbox"> “Logan Paul Video” – Film your own Blair Witch Project :) <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Create a fun trail video for your friends to see!</p><p class="badge-date"></p></div></details>
+  </section>
+
+  <!-- Go Touch Grass Badges -->
+  <section>
+    <h2>Go Touch Grass Badges</h2>
+    <details id="first"><summary><input type="checkbox"> “First Touch of Grass” – Explore your first trail <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Get out there and complete your first trail journey!</p><p class="badge-date"></p></div></details>
+    <details id="frequent"><summary><input type="checkbox"> “Frequent Grass Toucher” – Been to the trail 5× <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Visit five different trails to earn this title.</p><p class="badge-date"></p></div></details>
+    <details id="explorer"><summary><input type="checkbox"> “Trail Explorer” – Visit all three trails <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Explore all three trails to prove your dedication to nature.</p><p class="badge-date"></p></div></details>
+    <details id="ucf"><summary><input type="checkbox"> “UCF Touches Grass” – Visit trails in Orlando <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"></summary><div class="badge-info"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"><p>Represent UCF by exploring local Orlando trails!</p><p class="badge-date"></p></div></details>
+  </section>
+
+  <!-- Popup -->
+  <div class="modal" id="popup">
+    <div class="modal-content">
+      <img id="badgeImage" src="" alt="Badge">
+      <h3>🎉 Congratulations!</h3>
+      <p id="message">You’ve completed a badge!</p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Go Touch Grass | Explore. Discover. Achieve.</p>
+  </footer>
+
+  <script>
+    const menu=document.getElementById('menu');
+    function toggleMenu(){menu.style.display=(menu.style.display==='block')?'none':'block';}
+
+    const allDetails=document.querySelectorAll('details');
+    const popup=document.getElementById('popup');
+    const badgeImage=document.getElementById('badgeImage');
+    const message=document.getElementById('message');
+    const progressBar=document.getElementById('progressBar');
+
+    const checkboxes=[...document.querySelectorAll('details input[type="checkbox"]')];
+    const badges={};
+    allDetails.forEach(d=>{
+      const id=d.id;
+      const img="https://upload.wikimedia.org/wikipedia/commons/4/4c/Generic-gold-badge-icon.png"; // unified image
+      const name=d.querySelector('summary').textContent.trim();
+      badges[id]={name,img};
+    });
+
+    window.addEventListener('load',()=>{
+      checkboxes.forEach(box=>{
+        const id=box.closest('details').id;
+        const saved=localStorage.getItem(id);
+        const date=localStorage.getItem(id+'_date');
+        if(saved==='true'){
+          box.checked=true;
+          if(date) box.closest('details').querySelector('.badge-date').textContent="Completed on: "+date;
+        }
+      });
+      updateProgressBar();
+    });
+
+    checkboxes.forEach(box=>{
+      box.addEventListener('change',()=>{
+        const id=box.closest('details').id;
+        localStorage.setItem(id,box.checked);
+        updateProgressBar();
+        if(box.checked){
+          const date=new Date().toLocaleDateString();
+          localStorage.setItem(id+'_date',date);
+          box.closest('details').querySelector('.badge-date').textContent="Completed on: "+date;
+          const b=badges[id];
+          badgeImage.src=b.img;
+          message.textContent=`You just completed the "${b.name}" badge! 🎖️`;
+          popup.style.display='flex';
+        }
+      });
+    });
+
+    function closePopup(){popup.style.display='none';}
+    function updateProgressBar(){
+      const total=checkboxes.length;
+      const done=checkboxes.filter(b=>b.checked).length;
+      const pct=Math.round((done/total)*100);
+      progressBar.style.width=pct+'%';
+      progressBar.textContent=pct+'%';
+      localStorage.setItem('progress',pct);
+    }
+  </script>
+</body>
+</html>

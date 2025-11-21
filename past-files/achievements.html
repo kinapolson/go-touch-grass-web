@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go Touch Grass - Achievements</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="menu-container">
+      <div class="menu-btn" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="menu" id="menu">
+        <a href="home.html">Home</a>
+        <a href="photos.html">Photos & Information</a>
+        <a href="achievements.html">Achievements</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </div>
+    <h1>Go Touch Grass</h1>
+    <p>Explore Nature and Complete Fun Outdoor Challenges</p>
+  </header>
+
+  <h2 class="header-txt">Total Progress</h2>
+  <div id="p-c-brown">
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar">0%</div>
+    </div>
+  </div>
+
+<!-- Lake Eola Trail Badges -->
+<section>
+<h2 class="header-txt">Lake Eola Trail Badges</h2>
+<details id="swan">
+  <summary>
+    <input type="checkbox"> “Swan Lake” - Identify a swan 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info"><img src="https://img.icons8.com/?size=100&id=40537&format=png&color=000000">
+    <p>Identify a swan on the Lake Eola trail.</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+
+<details id="fauna">
+  <summary>
+    <input type="checkbox"> “Eola Fauna” - Observe wildlife at Lake Eola Loop 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=45998&format=png&color=000000">
+    <p>Spot and observe wildlife around Lake Eola.</p><p class="badge-date"></p>
+  </div>
+</details>
+
+<details id="flora">
+  <summary>
+    <input type="checkbox"> “Eola Flora” - Touch grass at Lake Eola Loop 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=MwEKvEfNxfv0&format=png&color=000000">
+    <p>Touch the grass to earn your Flora badge!</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+
+<details id="art">
+  <summary>
+    <input type="checkbox"> “Art Appreciator” - Find the Muse of Discovery and take a selfie 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary><div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=HaIBVDvtZ8H7&format=png&color=000000">
+    <p>Find and photograph the Muse of Discovery sculpture.</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+
+<details id="feed">
+  <summary>
+    <input type="checkbox"> “Feed the Birds” - Feed birds at trail feeders 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=97067&format=png&color=000000">
+    <p>Feed birds using food from approved feeders.</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+    
+<details id="boat">
+  <summary>
+    <input type="checkbox"> “Touch Water” - Rent a swan boat ($15) 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=9317&format=png&color=000000">
+    <p>Rent and ride a swan boat at Lake Eola.</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+
+<details id="house">
+  <summary>
+    <input type="checkbox"> “Visit Lake Eola House” 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=60579&format=png&color=000000">
+    <p>Stop by the Lake Eola House and learn its history.</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+
+<details id="tg1">
+  <summary>
+    <input type="checkbox"> “Touch Grass 1” - Complete all Eola achievements 
+    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+  </summary>
+  <div class="badge-info">
+    <img src="https://img.icons8.com/?size=100&id=2koI9uU0dBK7&format=png&color=000000">
+    <p>Complete all Lake Eola badges to earn this achievement.</p>
+    <p class="badge-date"></p>
+  </div>
+</details>
+</section>
+
+  <!-- Arboretum Trail Badges -->
+  <section>
+    <h2>Arboretum Trail Badges</h2>
+    <details id="tg2">
+      <summary>
+        <input type="checkbox"> “Touch Grass 2” - Complete all Arboretum achievements 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=2koI9uU0dBK7&format=png&color=000000">
+        <p>Earned by completing all Arboretum Trail tasks.</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+
+    <details id="waldo">
+      <summary>
+        <input type="checkbox"> “Where’s Waldo?” – Find Kina’s dead body in the lake (💀) 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=1ikYZoxJsWtL&format=png&color=000000">
+        <p>Locate the hidden Easter egg on the trail 😉</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+    
+    <details id="bear">
+      <summary>
+        <input type="checkbox"> “Bear Country” – Bring a helmet 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=103255&format=png&color=000000">
+        <p>Be prepared for any encounter on the trail — safety first!</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+
+    <details id="logan">
+      <summary>
+        <input type="checkbox"> “Logan Paul Video” – Film your own Blair Witch Project :) 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=66164&format=png&color=000000">
+        <p>Create a fun trail video for your friends to see!</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+  </section>
+
+  <!-- Go Touch Grass Badges -->
+  <section>
+    <h2>Go Touch Grass Badges</h2>
+    <details id="first">
+      <summary>
+        <input type="checkbox"> “First Touch of Grass” – Explore your first trail 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary><div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=76931&format=png&color=000000">
+        <p>Get out there and complete your first trail journey!</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+    
+    <details id="frequent">
+      <summary>
+        <input type="checkbox"> “Frequent Grass Toucher” – Been to the trail 5× 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=4O1i6G78Iki4&format=png&color=000000">
+        <p>Visit five different trails to earn this title.</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+    
+    <details id="explorer">
+      <summary>
+        <input type="checkbox"> “Trail Explorer” – Visit all three trails 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=SjG6V5ixNHfD&format=png&color=000000">
+        <p>Explore all three trails to prove your dedication to nature.</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+    
+    <details id="ucf">
+      <summary>
+        <input type="checkbox"> “UCF Touches Grass” – Visit trails in Orlando 
+        <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+      </summary>
+      <div class="badge-info">
+        <img src="https://img.icons8.com/?size=100&id=79387&format=png&color=000000">
+        <p>Represent UCF by exploring local Orlando trails!</p>
+        <p class="badge-date"></p>
+      </div>
+    </details>
+  </section>
+
+  <!-- Popup -->
+  <div class="modal" id="popup">
+    <div class="modal-content">
+      <img id="badgeImage" src="" alt="Badge">
+      <h3>🎉 Congratulations!</h3>
+      <p id="message">You’ve completed a badge!</p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Go Touch Grass | Explore. Discover. Achieve.</p>
+  </footer>
+
+  <script src="gtgweb.js"></script>
+</body>
+</html>

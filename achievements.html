@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Go Touch Grass - Achievements</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gtgstyle.css">
 </head>
 <body>
+  <!--Navbar-->
   <header>
     <div class="menu-container">
       <div class="menu-btn" onclick="toggleMenu(this)">
@@ -14,17 +15,18 @@
         <div class="bar3"></div>
       </div>
       <div class="menu" id="menu">
-        <a href="home.html">Home</a>
-        <a href="photos.html">Photos & Information</a>
+        <a href="homepage.html">Home</a>
+        <a href="trails.html">Trails</a>
         <a href="achievements.html">Achievements</a>
         <a href="about.html">About Us</a>
+        <a href="profile.html">Profile</a>
       </div>
     </div>
     <h1>Go Touch Grass</h1>
     <p>Explore Nature and Complete Fun Outdoor Challenges</p>
   </header>
 
-  <h2>Total Progress</h2>
+  <h2 class="header-txt">Total Progress</h2>
   <div id="p-c-brown">
     <div class="progress-container">
       <div id="progressBar" class="progress-bar">0%</div>
@@ -32,105 +34,105 @@
   </div>
 
 <!-- Lake Eola Trail Badges -->
-<section>
-<h2>Lake Eola Trail Badges</h2>
-<details id="swan">
-  <summary>
-    <input type="checkbox"> “Swan Lake” - Identify a swan 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info"><img src="https://img.icons8.com/?size=100&id=40537&format=png&color=000000">
-    <p>Identify a swan on the Lake Eola trail.</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
+<section class="badge-container">
+  <h2 class="header-txt">Lake Eola Trail Badges</h2>
+  <details id="swan">
+    <summary>
+      <input type="checkbox"> “Swan Lake” - Identify a swan 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info"><img src="https://img.icons8.com/?size=100&id=40537&format=png&color=000000">
+      <p>Identify a swan on the Lake Eola trail.</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
 
-<details id="fauna">
-  <summary>
-    <input type="checkbox"> “Eola Fauna” - Observe wildlife at Lake Eola Loop 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=45998&format=png&color=000000">
-    <p>Spot and observe wildlife around Lake Eola.</p><p class="badge-date"></p>
-  </div>
-</details>
+  <details id="fauna">
+    <summary>
+      <input type="checkbox"> “Eola Fauna” - Observe wildlife at Lake Eola Loop 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=45998&format=png&color=000000">
+      <p>Spot and observe wildlife around Lake Eola.</p><p class="badge-date"></p>
+    </div>
+  </details>
 
-<details id="flora">
-  <summary>
-    <input type="checkbox"> “Eola Flora” - Touch grass at Lake Eola Loop 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=MwEKvEfNxfv0&format=png&color=000000">
-    <p>Touch the grass to earn your Flora badge!</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
+  <details id="flora">
+    <summary>
+      <input type="checkbox"> “Eola Flora” - Touch grass at Lake Eola Loop 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=MwEKvEfNxfv0&format=png&color=000000">
+      <p>Touch the grass to earn your Flora badge!</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
 
-<details id="art">
-  <summary>
-    <input type="checkbox"> “Art Appreciator” - Find the Muse of Discovery and take a selfie 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary><div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=HaIBVDvtZ8H7&format=png&color=000000">
-    <p>Find and photograph the Muse of Discovery sculpture.</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
+  <details id="art">
+    <summary>
+      <input type="checkbox"> “Art Appreciator” - Find the Muse of Discovery and take a selfie 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary><div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=HaIBVDvtZ8H7&format=png&color=000000">
+      <p>Find and photograph the Muse of Discovery sculpture.</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
 
-<details id="feed">
-  <summary>
-    <input type="checkbox"> “Feed the Birds” - Feed birds at trail feeders 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=97067&format=png&color=000000">
-    <p>Feed birds using food from approved feeders.</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
-    
-<details id="boat">
-  <summary>
-    <input type="checkbox"> “Touch Water” - Rent a swan boat ($15) 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=9317&format=png&color=000000">
-    <p>Rent and ride a swan boat at Lake Eola.</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
+  <details id="feed">
+    <summary>
+      <input type="checkbox"> “Feed the Birds” - Feed birds at trail feeders 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=97067&format=png&color=000000">
+      <p>Feed birds using food from approved feeders.</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
+      
+  <details id="boat">
+    <summary>
+      <input type="checkbox"> “Touch Water” - Rent a swan boat ($15) 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=9317&format=png&color=000000">
+      <p>Rent and ride a swan boat at Lake Eola.</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
 
-<details id="house">
-  <summary>
-    <input type="checkbox"> “Visit Lake Eola House” 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=60579&format=png&color=000000">
-    <p>Stop by the Lake Eola House and learn its history.</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
+  <details id="house">
+    <summary>
+      <input type="checkbox"> “Visit Lake Eola House” 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=60579&format=png&color=000000">
+      <p>Stop by the Lake Eola House and learn its history.</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
 
-<details id="tg1">
-  <summary>
-    <input type="checkbox"> “Touch Grass 1” - Complete all Eola achievements 
-    <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
-  </summary>
-  <div class="badge-info">
-    <img src="https://img.icons8.com/?size=100&id=2koI9uU0dBK7&format=png&color=000000">
-    <p>Complete all Lake Eola badges to earn this achievement.</p>
-    <p class="badge-date"></p>
-  </div>
-</details>
+  <details id="tg1">
+    <summary>
+      <input type="checkbox"> “Touch Grass 1” - Complete all Eola achievements 
+      <img src="https://img.icons8.com/?size=100&id=57925&format=png&color=000000">
+    </summary>
+    <div class="badge-info">
+      <img src="https://img.icons8.com/?size=100&id=2koI9uU0dBK7&format=png&color=000000">
+      <p>Complete all Lake Eola badges to earn this achievement.</p>
+      <p class="badge-date"></p>
+    </div>
+  </details>
 </section>
 
   <!-- Arboretum Trail Badges -->
-  <section>
-    <h2>Arboretum Trail Badges</h2>
+  <section class="badge-container">
+    <h2 class="header-txt">Arboretum Trail Badges</h2>
     <details id="tg2">
       <summary>
         <input type="checkbox"> “Touch Grass 2” - Complete all Arboretum achievements 
@@ -181,8 +183,8 @@
   </section>
 
   <!-- Go Touch Grass Badges -->
-  <section>
-    <h2>Go Touch Grass Badges</h2>
+  <section class="badge-container">
+    <h2 class="header-txt">Go Touch Grass Badges</h2>
     <details id="first">
       <summary>
         <input type="checkbox"> “First Touch of Grass” – Explore your first trail 
@@ -241,6 +243,7 @@
     </div>
   </div>
 
+  <!--Footer-->
   <footer>
     <p>&copy; 2025 Go Touch Grass | Explore. Discover. Achieve.</p>
   </footer>

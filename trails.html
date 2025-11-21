@@ -1,0 +1,292 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go Touch Grass - Trails</title>
+  <link rel="stylesheet" href="gtgstyle.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <div class="menu-container">
+            <div class="menu-btn" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="menu" id="menu">
+                <a href="homepage.html">Home</a>
+                <a href="trails.html">Trails</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="about.html">About Us</a>
+                <a href="profile.html">Profile</a>
+            </div>
+        </div>
+        <h1>Go Touch Grass</h1>
+        <p>Explore Nature and Complete Fun Outdoor Challenges</p>
+    </header>
+    
+    
+    <!-- TRAIL CHOICE LIST BUTTONS -->
+    <div id="trail-list">
+        <button class="trail-button" onclick="openPark('eola')">Lake Eola Park</button>
+        <button class="trail-button" onclick="openPark('arboretum')">UCF Arboretum Trail</button>
+        <button class="trail-button" onclick="openPark('sanford')">Sanford Trail</button>
+    </div>  
+
+    <!-- ========== LAKE EOLA SECTION ========== -->
+    <div id="eola" class="trail-section">
+
+    <!-- THINGLINK EMBED (appears ONCE a park is selected) -->
+    <!--
+    <div class="thinglink-wrapper">
+        <iframe
+        width="960"
+        height="480"
+        data-original-width="8000"
+        data-original-height="4000"
+        src="https://www.thinglink.com/view/scene/2036229862762480102"
+        type="text/html"
+        style="border: none;"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        scrolling="no">
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+    </div>
+    -->
+    
+    <h2>Lake Eola Park</h2>
+
+    <!-- TABS -->
+    <div class="tab-container">
+        <div class="tab active" onclick="switchTab(event, 'eola-overview')">Overview</div>
+        <div class="tab" onclick="switchTab(event, 'eola-flora')">Flora & Fauna</div>
+        <div class="tab" onclick="switchTab(event, 'eola-activities')">Activities</div>
+        <div class="tab" onclick="switchTab(event, 'eola-achievements')">Achievements</div>
+    </div>
+
+    <!-- TAB CONTENT: OVERVIEW (restored original text) -->
+    <div id="eola-overview" class="tab-content active">
+        <p> 
+        Lake Eola Loop is located in Dowtown Orlando. It is roughly a 20 minute
+        walk from UCF's Downtown Campus. This 0.9 mile paved trail features
+        aesthetics both natural and urban, making it an ideal starting 
+        point for first-time grass-touchers.
+        </p>
+        <br>
+        <h2>History</h2>
+        <h4>Origins</h4>
+        <p>
+        In 1873, Jacob Summerlin purchased 200 acres of land where a 
+        sinkhole filled with water from an aquifer formed Lake Eola. 
+        </p>
+        <p>
+        The Summerlin family donated land around the lake in 1883,
+        naming it after Robert Summerlin's late sweetheart, which then
+        became a public park in 1888.
+        </p>
+        <h4>Swans</h4>
+        <p>
+        Swans were first introduced in 1922 and now include several
+        species such as Trumpeter, Black Neck, and Austrailian Black Sawns. 
+        They park conducts an annual Swan Round-up for veterinary care 
+        vaccination.
+        </p>
+        <h4>Landmarks</h4>
+        <ul>
+        <li>
+            The Eola House (1924): 
+            A Mediterranean Revival-style home serving as park offices and event space.
+        </li>
+        <li>
+            The Chinese Ting: 
+            A friendship gift from Nelson Ying, originally built in Shanghai.
+        </li>
+        <li>
+            Battle of the Bulge Monument (1999): 
+            Honors World War II veterans.
+        </li>
+        <li>
+            Walt Disney Amphitheater: 
+            Originally built in 1886, reconstructed on the lake’s west side in 1989.
+        </li>
+        <li>
+            Japanese Rock Garden: 
+            Features a 12.5-ton black marble from Tainan, Taiwan, symbolizing Orlando’s sister city friendship.
+        </li>
+        <li>
+        Sperry Fountain (1914): 
+        Donated by Mayor E. Frank Sperry, featuring wrought iron duck and leaf designs.
+        </li>
+        <li>
+            Linton E. Allen Memorial Fountain (1957): 
+            The park’s centerpiece, known for its water displays and lighting. After a lightning strike in 2009, it was restored in 2011, with original green glass preserved in the Eola House.
+        </li>
+        </ul>
+    </div>
+
+    <!-- TAB CONTENT: FLORA & FAUNA -->
+    <div id="eola-flora" class="tab-content">
+        <h2>Flora</h2>
+        <p>
+        Common plant life includes large live oaks, palm tree, and cypress trees
+        contributing to the park's tropical and shaded landscape.
+        </p>
+
+        <h2>Fauna</h2>
+        <p>
+        Lake Eola is home to a variety of wildlife, most notably
+        several non-native swan pieces originally transferred
+        from Lake Lucerne due to territorial conflicts. These include:
+        </p>
+        <ul>
+        <li>
+            Whooper Swans: 
+            White with yellow beaks extending past the nostrils; 
+            native to Europe and Asia Minor.
+        </li>
+        <li>
+            Black Neck Swans:
+            Black-necked and mostly water-bound; 
+            from South America.
+        </li>
+        <li>
+            Australian Black Swans: 
+            Black-feathered swans native to Australia.
+        </li>
+        <li>
+            Royal Mute Swans: 
+            Less vocal, white with orange and black bills and a black knob; 
+            from Europe and Asia.
+        </li>
+        <li>
+            Trumpeter Swans: 
+            Native to North America, 
+            white with black beaks.
+        </li>
+        </ul>
+        <p>Other animals found around the park include rock pigeons, 
+        Muscovy ducks, wading birds (ibis, herons, egrets), 
+        Egyptian geese, pond turtles, and eastern gray squirrels.
+        </p>
+
+        <h2>Conservation</h2>
+        <p>
+        Fishing is prohibited, and numerous trash cans encourage cleanliness. 
+        Visitors are reminded to protect wildlife, such as using designated feed dispensers for birds, 
+        since other foods can make them sick.</p>
+    </div>
+
+    <!-- TAB CONTENT: ACTIVITIES -->
+    <div id="eola-activities" class="tab-content">
+        <h3>Activities</h3>
+        <ul>
+        <li>Walt Disney Amphitheatre</li>
+        <li>"The Band Shell"</li>
+        <li>The Chinese Ting - 
+            Donated by Dr. Nelson Ying. 
+            Symbolizing Sister-city relationship with Guilin, China
+        </li>
+        <li>Japanese Rock Garden - 
+            Donated by Su Nan-Cheng (Mayor of Tainan, Taiwan)
+        </li>
+        <!--Sculputre-->
+        <li>Take Flight by Douwe Blumberg</li>
+        <li>Muse of Discovery by Meg White</li>
+        <li>Grandmother's Legacy of Love</li>
+        </ul>
+    </div>
+
+    <!-- TAB CONTENT: ACHIEVEMENTS -->
+    <div id="eola-achievements" class="tab-content">
+        <h3>Badges</h3>
+        <ul>
+        <li>Swan Lake – Identify a Swan</li>
+        <li>Eola Fauna – Observe Wildlife at Lake Eola Loop</li>
+        <li>Eola Flora – Touch Grass at Lake Eola Loop</li>
+        <li>Art Appreciator – Find the “Muse of Discovery” and Take a Selfie</li>
+        <li>Feed the Birds – Feed Birds using the Trail Feeders</li>
+        <li>Touch Water – Ride a Swan Boat</li>
+        <li>Visit Lake Eola House</li>
+        <li>Touch Grass I - Complete All Lake Eola Badges</li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- ========== ARBORETUM SECTION (BLANK TABS) ========== -->
+
+    <div id="arboretum" class="trail-section">
+    <!--
+    <div class="thinglink-wrapper">
+        <iframe
+        width="960"
+        height="480"
+        data-original-width="8000"
+        data-original-height="4000"
+        src="https://www.thinglink.com/view/scene/2036229862762480102"
+        style="border: none;"
+        allowfullscreen>
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+    </div>
+    -->
+    <h2>UCF Arboretum Trail</h2>
+
+    <div class="tab-container">
+        <div class="tab active" onclick="switchTab(event, 'arb-overview')">Overview</div>
+        <div class="tab" onclick="switchTab(event, 'arb-flora')">Flora & Fauna</div>
+        <div class="tab" onclick="switchTab(event, 'arb-activities')">Activities</div>
+        <div class="tab" onclick="switchTab(event, 'arb-achievements')">Achievements</div>
+    </div>
+
+    <!-- TAB CONTENT: OVERVIEW (restored original text) -->
+    <div id="arb-overview" class="tab-content active"></div>
+    <div id="arb-flora" class="tab-content"></div>
+    <div id="arb-activities" class="tab-content"></div>
+    <div id="arb-achievements" class="tab-content"></div>
+    </div>
+
+    <!-- ========== SANFORD SECTION (BLANK TABS) ========== -->
+    <div id="sanford" class="trail-section">
+    <!--
+    <div class="thinglink-wrapper">
+        <iframe
+        width="960"
+        height="480"
+        data-original-width="8000"
+        data-original-height="4000"
+        src="https://www.thinglink.com/view/scene/2036229862762480102"
+        style="border: none;"
+        allowfullscreen>
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+    </div>
+    -->
+    <h2>Sanford Trail</h2>
+
+    <div class="tab-container">
+        <div class="tab active" onclick="switchTab(event, 'sanford-overview')">Overview</div>
+        <div class="tab" onclick="switchTab(event, 'sanford-flora')">Flora & Fauna</div>
+        <div class="tab" onclick="switchTab(event, 'sanford-activities')">Activities</div>
+        <div class="tab" onclick="switchTab(event, 'sanford-achievements')">Achievements</div>
+    </div>
+
+    <!-- TAB CONTENT: OVERVIEW (restored original text) -->
+    <div id="sanford-overview" class="tab-content active"></div>
+    <div id="sanford-flora" class="tab-content"></div>
+    <div id="sanford-activities" class="tab-content"></div>
+    <div id="sanford-achievements" class="tab-content"></div>
+    </div>
+
+    <br><br><br><br>
+
+    <!--Footer-->
+    <footer>
+    <p>&copy; 2025 Go Touch Grass | Explore. Discover. Achieve.</p>
+    </footer>
+
+    <script src="gtgjs.js"></script>
+</body>
+</html>

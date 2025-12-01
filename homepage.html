@@ -1,14 +1,14 @@
-<!DOCTYPE html>  
-
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Go Touch Grass - Home</title>
+  <title>Go Touch Grass - Trails</title>
   <link rel="stylesheet" href="gtgstyle.css">
 </head>
+<body>
     <!--Navbar-->
     <header>
-          <div class="logohome">
+        <div class="logohome">
         <img src="fixed_GTG_Logo.webp" alt="Fern" width="100px" style="position:absolute; right:0px;">
         </div>
         <div class="menu-container">
@@ -26,137 +26,462 @@
         </div>
         <h1>Go Touch Grass</h1>
         <p>Explore Nature and Complete Fun Outdoor Challenges</p>
-        
     </header>
-  
-    <!--Introduction Section-->
-    <section class="intro-section">
-        <div class="hometext">
-        <p><span style="color:#403314">This website encourages you to explore the outdoors and connect with nature through various challenges and scenic locations.<br></span></p>
-        <p>
-            <span style="color:#403314">
-               <br>Have you ever said something so terminally online, your replies were full of people telling you to “touch grass?” Were you at a total loss of how and where you could find said “grass” to touch? We’ve all been there, but with Go Touch Grass you can finally touch grass and provide proof of it with fun badges.<br>
-<br>
-<p style="font-size: 20px;">How does it work?</p><p>
-Each trail featured has its own page with basic information, as well as a video featuring highlights of the trail and an interactive 360 camera photoset, so you can get a good idea of what you will experience IRL ahead of time<br>
-Actually go outside! We want you to touch grass for real <br>
-After visiting the trail, head back online to our “Achievements” tab and check off every task you successfully completed to earn cool badges you can display on your profile
-Share your badges with friends online, so everyone knows you have actually touched grass<br>
-<br><p>
-</div>
+    
+    
+    <!-- TRAIL CHOICE LIST BUTTONS -->
+    <div id="trail-list">
+        <button class="trail-button" onclick="openPark('eola')">Lake Eola Park</button>
+        <button class="trail-button" onclick="openPark('arboretum')">UCF Arboretum Trail</button>
+        <button class="trail-button" onclick="openPark('sanford')">Sanford Trail</button>
+    </div>  
 
+    <!-- ========== LAKE EOLA SECTION ========== -->
+    <div id="eola" class="trail-section">
 
-            </span>
-        </p>
-    </section>
-
-    <!--Slideshow-->
-    <div id="transparent-section">
-        <div class="slideshow-box">
-            <div class="slideshow-container">
-                <!--Lake Eola Slide-->
-                <div class="mySlides fade">
-                    <div class="trail-widget">
-                        <div class="container">
-                            <!--Lake Eola Trail SC-->
-                            <div class="big-box">
-                                <img class="big-box" src="img/lakeeola.webp" alt="Overview image of Lake Eola Loop" class="cover-img">
-                            </div>
-                
-                            <div class="right-boxes">
-                                <!--ThinkLink SC-->
-                                <div class="small-box">
-                                    <img src="img/lethinklink.JPG" alt="Lake Eola Loop ThinkLink Thumbnail" class="cover-img">
-                                </div>
-                                <!--Video SC-->
-                                <div class="small-box">
-                                    <img src="img/levideo.png" alt="Lake Eola Loop Video Thumbnail" class="cover-img">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grassButtonSection"><a class="gtgTrailButton" href="trails.html"> <img src="grass2.0.webp" alt="Touch Grass Here" width="300px"> </a></div>
-                </div>
-                
-                <!--UCF Arboretum Slide-->
-                <div class="mySlides fade">
-                    <div class="trail-widget">
-                        <div class="container">
-                            <!--Arboretum Trail SC-->
-                            <div class="big-box">
-                                <img class="big-box" src="img/arb.jpg" alt="Overview image of Lake Eola Loop" class="cover-img">
-                            </div>
-                
-                            <div class="right-boxes">
-                                <!--ThinkLink SC-->
-                                <div class="small-box"></div>
-                                <!--Video SC-->
-                                <div class="small-box"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grassButtonSection"><a class="gtgTrailButton" href="trails.html"> <img src="grass2.0.webp" alt="Touch Grass Here" width="300px"> </a></div>
-                </div>
-                
-                <!--Trail 3 Slide-->
-                <div class="mySlides fade">
-                    <div class="trail-widget">
-                        <div class="container">
-                            <!--Trail Phot0-->
-                            <div class="big-box">
-                                <div class="label">Trail 3</div>
-                            </div>
-                
-                            <div class="right-boxes">
-                                <!--ThinkLink SC-->
-                                <div class="small-box">
-                                    <div class="label">Trail 3 ThinkLink Thumbnail</div>
-                                </div>
-                                <!--Video SC-->
-                                <div class="small-box">
-                                    <div class="label">Trail 3 Video Thumbnail</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grassButtonSection"><a class="gtgTrailButton" href="trails.html"> <img src="grass2.0.webp" alt="Touch Grass Here" width="300px"> </a></div>
-                </div> 
-                
-                <!--Buttons-->
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                
-                </div>
-                <br>
-                
-                <!--Slider Dot Nav-->
-                <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-                </div>
-            </div>      
-        </div>
+    <!-- THINGLINK EMBED (appears ONCE a park is selected) -->
+    <!--
+    <div class="thinglink-wrapper">
+        <iframe
+        width="960"
+        height="480"
+        data-original-width="8000"
+        data-original-height="4000"
+        src="https://www.thinglink.com/view/scene/2036229862762480102"
+        type="text/html"
+        style="border: none;"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        scrolling="no">
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
     </div>
-      
-    <br>
-    <section class="intro-section">
-        <span style="color:#403314">
-<p style="font-size: 20px;">Why do I need to actually go outside if I can just look at the website?</p><p>
-Photos and videos do not capture the full experience<br>
-Many trails have fun activities that need to be done in person<br>
-Going outside has been scientifically proven on multiple counts to improve both your physical and mental health<br>
-Lying for badges is loser behavior and Fern WILL be judging you.<br>
+    -->
+    
+    <h2>Lake Eola Park</h2>
+
+    <!-- TABS -->
+    <div class="tab-container">
+        <div class="tab active" onclick="switchTab(event, 'eola-overview')">Overview</div>
+        <div class="tab" onclick="switchTab(event, 'eola-flora')">Flora & Fauna</div>
+        <div class="tab" onclick="switchTab(event, 'eola-activities')">Activities</div>
+        <div class="tab" onclick="switchTab(event, 'eola-achievements')">Achievements</div>
+    </div>
+
+    <!-- TAB CONTENT: OVERVIEW (restored original text) -->
+    <div id="eola-overview" class="tab-content active">
+        <p> 
+        Lake Eola Loop is located in Dowtown Orlando. It is roughly a 20 minute
+        walk from UCF's Downtown Campus. This 0.9 mile paved trail features
+        aesthetics both natural and urban, making it an ideal starting 
+        point for first-time grass-touchers.
+        </p>
+        <br>
+        <h2>History</h2>
+        <h4>Origins</h4>
+        <p>
+        In 1873, Jacob Summerlin purchased 200 acres of land where a 
+        sinkhole filled with water from an aquifer formed Lake Eola. 
+        </p>
+        <p>
+        The Summerlin family donated land around the lake in 1883,
+        naming it after Robert Summerlin's late sweetheart, which then
+        became a public park in 1888.
+        </p>
+        <h4>Swans</h4>
+        <p>
+        Swans were first introduced in 1922 and now include several
+        species such as Trumpeter, Black Neck, and Austrailian Black Sawns. 
+        They park conducts an annual Swan Round-up for veterinary care 
+        vaccination.
+        </p>
+        <h4>Landmarks</h4>
+        <ul>
+        <li>
+            The Eola House (1924): 
+            A Mediterranean Revival-style home serving as park offices and event space.
+        </li>
+        <li>
+            The Chinese Ting: 
+            A friendship gift from Nelson Ying, originally built in Shanghai.
+        </li>
+        <li>
+            Battle of the Bulge Monument (1999): 
+            Honors World War II veterans.
+        </li>
+        <li>
+            Walt Disney Amphitheater: 
+            Originally built in 1886, reconstructed on the lake’s west side in 1989.
+        </li>
+        <li>
+            Japanese Rock Garden: 
+            Features a 12.5-ton black marble from Tainan, Taiwan, symbolizing Orlando’s sister city friendship.
+        </li>
+        <li>
+        Sperry Fountain (1914): 
+        Donated by Mayor E. Frank Sperry, featuring wrought iron duck and leaf designs.
+        </li>
+        <li>
+            Linton E. Allen Memorial Fountain (1957): 
+            The park’s centerpiece, known for its water displays and lighting. After a lightning strike in 2009, it was restored in 2011, with original green glass preserved in the Eola House.
+        </li>
+        </ul>
+    </div>
+
+    <!-- TAB CONTENT: FLORA & FAUNA -->
+    <div id="eola-flora" class="tab-content">
+        <h2>Flora</h2>
+        <p>
+        Common plant life includes large live oaks, palm tree, and cypress trees
+        contributing to the park's tropical and shaded landscape.
+        </p>
+
+        <h2>Fauna</h2>
+        <p>
+        Lake Eola is home to a variety of wildlife, most notably
+        several non-native swan pieces originally transferred
+        from Lake Lucerne due to territorial conflicts. These include:
+        </p>
+        <ul>
+        <li>
+            Whooper Swans: 
+            White with yellow beaks extending past the nostrils; 
+            native to Europe and Asia Minor.
+        </li>
+        <li>
+            Black Neck Swans:
+            Black-necked and mostly water-bound; 
+            from South America.
+        </li>
+        <li>
+            Australian Black Swans: 
+            Black-feathered swans native to Australia.
+        </li>
+        <li>
+            Royal Mute Swans: 
+            Less vocal, white with orange and black bills and a black knob; 
+            from Europe and Asia.
+        </li>
+        <li>
+            Trumpeter Swans: 
+            Native to North America, 
+            white with black beaks.
+        </li>
+        </ul>
+        <p>Other animals found around the park include rock pigeons, 
+        Muscovy ducks, wading birds (ibis, herons, egrets), 
+        Egyptian geese, pond turtles, and eastern gray squirrels.
+        </p>
+
+        <h2>Conservation</h2>
+        <p>
+        Fishing is prohibited, and numerous trash cans encourage cleanliness. 
+        Visitors are reminded to protect wildlife, such as using designated feed dispensers for birds, 
+        since other foods can make them sick.</p>
+    </div>
+
+    <!-- TAB CONTENT: ACTIVITIES -->
+    <div id="eola-activities" class="tab-content">
+        <h3>Activities</h3>
+        <ul>
+        <li>Walt Disney Amphitheatre</li>
+        <li>"The Band Shell"</li>
+        <li>The Chinese Ting - 
+            Donated by Dr. Nelson Ying. 
+            Symbolizing Sister-city relationship with Guilin, China
+        </li>
+        <li>Japanese Rock Garden - 
+            Donated by Su Nan-Cheng (Mayor of Tainan, Taiwan)
+        </li>
+        <!--Sculputre-->
+        <li>Take Flight by Douwe Blumberg</li>
+        <li>Muse of Discovery by Meg White</li>
+        <li>Grandmother's Legacy of Love</li>
+        </ul>
+    </div>
+
+    <!-- TAB CONTENT: ACHIEVEMENTS -->
+    <div id="eola-achievements" class="tab-content">
+        <h3>Badges</h3>
+        <ul>
+        <li>Swan Lake – Identify a Swan</li>
+        <li>Eola Fauna – Observe Wildlife at Lake Eola Loop</li>
+        <li>Eola Flora – Touch Grass at Lake Eola Loop</li>
+        <li>Art Appreciator – Find the “Muse of Discovery” and Take a Selfie</li>
+        <li>Feed the Birds – Feed Birds using the Trail Feeders</li>
+        <li>Touch Water – Ride a Swan Boat</li>
+        <li>Visit Lake Eola House</li>
+        <li>Touch Grass I - Complete All Lake Eola Badges</li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- ========== ARBORETUM SECTION (BLANK TABS) ========== -->
+
+    <div id="arboretum" class="trail-section">
+    <!--
+    <div class="thinglink-wrapper">
+        <iframe
+        width="960"
+        height="480"
+        data-original-width="8000"
+        data-original-height="4000"
+        src="https://www.thinglink.com/view/scene/2036229862762480102"
+        style="border: none;"
+        allowfullscreen>
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+    </div>
+    -->
+    <h2>UCF Arboretum Trail</h2>
+
+    <div class="tab-container">
+        <div class="tab active" onclick="switchTab(event, 'arb-overview')">Overview</div>
+        <div class="tab" onclick="switchTab(event, 'arb-flora')">Flora & Fauna</div>
+        <div class="tab" onclick="switchTab(event, 'arb-activities')">Activities</div>
+        <div class="tab" onclick="switchTab(event, 'arb-achievements')">Achievements</div>
+    </div>
+
+    <!-- TAB CONTENT: OVERVIEW (restored original text) -->
+    <div id="arb-overview" class="tab-content active">
+        <p> 
+        The Arboretum is located on the east side of the UCF campus. There are many different trails featured in The Arboretum, but we recommend Wildflower Loop, which is only 1.2 miles long. This trail is designated by orange path markers. You do not have to be a UCF student to visit here.
+
+        </p>
+        <br>
+    </div>
+    <div id="arb-flora" class="tab-content">
+        <h2>Flora</h2>
+        <h3>Wildflowers</h3>
+        <ul>
+            <li>
+                Blazing Star
+            </li>
+            <li>
+                Coastalplain Honeycombhead
+            </li>
+            <li>
+                Florida Paintbrush
+            </li>
+            <li>
+                Florida Tickseed
+            </li>
+            <li>
+                Forked Bluecurls
+            </li>
+            <li>
+                Fourpetal St. John's Wort
+            </li>
+            <li>
+                Goldenrod
+            </li>
+            <li>
+                Rayless Sunflower
+            </li>
+            <li>
+                Scarlet Calamint
+            </li>
+            <li>
+                Shortleaf Rosegentian
+            </li>
+            <li>
+                Titusville Balm
+            </li>
+            <li>
+                Waterlily
+            </li>
+        </ul>
+
+         <h3>Trees</h3>
+        <ul>
+            <li>
+                Longleaf Pine
+            </li>
+            <li>
+                Pond Cypress
+            </li>
+            <li>
+                Sabal Palm
+            </li>
+            <li>
+                Sand Live Oak
+            </li>
+            <li>
+                Wax Myrtle
+            </li>
+        </ul>
+
+         <h3>Shrubs and Other Plants</h3>
+        <ul>
+            <li>
+                American Beauty Berry
+            </li>
+            <li>
+                Bog Button
+            </li>
+            <li>
+                Bracken Fern
+            </li>
+            <li>
+               Chalky Bluestem
+            </li>
+            <li>
+                Coontie
+            </li>
+            <li>
+                Dahoon Holly
+            </li>
+            <li>
+                Feay’s Palafox
+            </li>
+            <li>
+                Fetterbush
+            </li>
+            <li>
+               Hooded Pitcher Plant
+            </li>
+            <li>
+                Lopsided Indiangrass
+            </li>
+            <li>
+                Prickly Pear Cactus
+            </li>
+            <li>
+                Saw Palmetto
+            </li>
+            <li>
+                Scrub Rosemary
+            </li>
+            <li>
+                Spanish Moss
+            </li>
+            <li>
+                Tail Jointweed
+            </li>
+            <li>
+                Wiregrass
+            </li>
+        </ul>
+
+        <h2>Fauna</h2>
+        <p>
+        The animals here are shyer than in other trails like Lake Eola loop, but there are still plenty of creatures that call this place home such as
+
+        </p>
+        <ul>
+        <li>
+            Bobcats
+        </li>
+        <li>
+            Bobwhite Quails
+        </li>
+        <li>
+           Coyotes
+        </li>
+        <li>
+           Gopher Tortoises
+        </li>
+        <li>
+            Great Blue Heron
+        </li>
+        <li>
+            Gray Foxes
+        </li>
+        <li>
+            Gray Squirrels
+        </li>
+        <li>
+            Raccoons
+        </li>
+        <li>
+            White-Tailed Deer
+        </li>
+        
+        </ul>
+
+        <h2>Conservation</h2>
+        <p>
+        UCF Land managers use prescribed fires to help maintain the ecosystem and prevent larger, unplanned fires. 
+Be mindful of wildlife for both the safety of you and them. If you come across an injured animal, call a professional. 
+</p>
+    </div>
+    <div id="arb-activities" class="tab-content">
+        <p> 
+        While you can explore the area yourself at your own pace, The Arboretum does offer two different hour-long guided tours for only $5 per person, per tour. <br>
 <br>
-If you’re ready to get started, click the grass button above to go to the trail featured in the slide show.<br>
-</span></p></section>
-    <br><br>
+The Pavilion can be rented out and includes a grill. <br>
+<br>
+Outside of the Wildflower Loop, The Arboretum has many interesting facilities and features that are worth checking out 
+<ul>
+    <li>
+        Apiary
+    </li>
+    <li>
+        Boardwalk
+    </li>
+    <li>
+        Community Garden
+    </li>
+    <li>
+        The Greenhouse
+    </li>
+</ul>
+
+
+        </p>
+    </div>
+    <div id="arb-achievements" class="tab-content">
+        <ul>
+            <li>
+                “Touch Grass 2” - Complete all Arboretum achievements
+            </li>
+            <li>
+                “Bear Country” – Bring a helmet
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- ========== SANFORD SECTION (BLANK TABS) ========== -->
+    <div id="sanford" class="trail-section">
+    <!--
+    <div class="thinglink-wrapper">
+        <iframe
+        width="960"
+        height="480"
+        data-original-width="8000"
+        data-original-height="4000"
+        src="https://www.thinglink.com/view/scene/2036229862762480102"
+        style="border: none;"
+        allowfullscreen>
+        </iframe>
+        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
+    </div>
+    -->
+    <h2>Sanford Trail</h2>
+
+    <div class="tab-container">
+        <div class="tab active" onclick="switchTab(event, 'sanford-overview')">Overview</div>
+        <div class="tab" onclick="switchTab(event, 'sanford-flora')">Flora & Fauna</div>
+        <div class="tab" onclick="switchTab(event, 'sanford-activities')">Activities</div>
+        <div class="tab" onclick="switchTab(event, 'sanford-achievements')">Achievements</div>
+    </div>
+
+    <!-- TAB CONTENT: OVERVIEW (restored original text) -->
+    <div id="sanford-overview" class="tab-content active"></div>
+    <div id="sanford-flora" class="tab-content"></div>
+    <div id="sanford-activities" class="tab-content"></div>
+    <div id="sanford-achievements" class="tab-content"></div>
+    </div>
+
+    <br><br><br><br>
 
     <!--Footer-->
     <footer>
     <p>&copy; 2025 Go Touch Grass | Explore. Discover. Achieve.</p>
     </footer>
 
-    <script src="hp.js"></script>
+    <script src="gtgjs.js"></script>
 </body>
 </html>

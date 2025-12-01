@@ -3,6 +3,10 @@ p {
     font-family: "Short Stack", cursive;
 }
 
+.brown-txt {
+    color: #403314;
+}
+
 
 /* header and footer */
 header {
@@ -64,7 +68,7 @@ body {
 
 #transparent-section {
     background-color: rgba(101, 93, 74, 0.5);
-    padding-top: 1em;
+    padding-top: 2.5em;
     padding-bottom: 1em;
     margin-top: 2em;
 }
@@ -291,6 +295,29 @@ img {vertical-align: middle;}
 
 
 /* trails.html */
+.trail-header {
+    font-family: "Short Stack", cursive;
+    color: #4b3a17
+}
+
+.thinklink-bg {
+    background-color: #4b3a17;
+    padding: 20px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+}
+
+.brochureButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6f8753;
+    color: white;
+}
+
 .location {
     background-color: #F8F4E9;
     padding: 20px;
@@ -349,6 +376,8 @@ img {vertical-align: middle;}
     margin-top: 20px;
     border-bottom: 3px solid #403314;
     padding-bottom: 5px;
+    font-family: "Short Stack", cursive;
+
 }
   
 .tab {

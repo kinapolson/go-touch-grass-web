@@ -39,11 +39,53 @@ function showSlides(n) {
 
 /* trails.html */
 function openPark(id) {
-    document.querySelectorAll('.trail-section').forEach(sec => sec.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
-    window.scrollTo(0, 0);
+  document.querySelectorAll('.trail-section').forEach(sec => sec.style.display = 'none');
+  const active = document.getElementById(id);
+  active.style.display = 'block';
+  window.scrollTo(0, 0);
+
+  if (id === 'eola') {
+      const wrapper = document.getElementById("eola-thinglink");
+      if (!wrapper.dataset.loaded) {
+          wrapper.innerHTML = `
+              <iframe
+                  width="960"
+                  height="480"
+                  data-original-width="8000"
+                  data-original-height="4000"
+                  src="https://www.thinglink.com/view/scene/2036229862762480102"
+                  type="text/html"
+                  style="border: none;"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                  scrolling="no">
+              </iframe>
+          `;
+          wrapper.dataset.loaded = "true";
+      }
+  } else if (id === 'arboretum') {
+    const wrapper = document.getElementById("arb-thinglink");
+      if (!wrapper.dataset.loaded) {
+          wrapper.innerHTML = `
+              <iframe 
+                width="960" 
+                height="480" 
+                data-original-width="11968" 
+                data-original-height="5984" 
+                src="https://www.thinglink.com/view/scene/2050048994620474021" 
+                type="text/html" 
+                style="border: none;" 
+                webkitallowfullscreen 
+                mozallowfullscreen 
+                allowfullscreen scrolling="no">
+              </iframe>
+          `;
+          wrapper.dataset.loaded = "true";
+      }
+  } 
 }
-  
+ 
 function switchTab(event, tabId) {
     const sec = event.target.closest('.trail-section');
   
@@ -111,4 +153,20 @@ function updateProgressBar(){
     progressBar.textContent=pct+'%';
   }
   localStorage.setItem('progress',pct);
+}
+
+/* trails.html */
+function printImage(src) {
+  const win = window.open('', '_blank'); 
+  win.document.write(`
+      <html>
+          <head>
+              <title>Print Image</title>
+          </head>
+          <body onload="window.print(); window.close();">
+              <img src="${src}" style="width: 100%;">
+          </body>
+      </html>
+  `);
+  win.document.close();
 }

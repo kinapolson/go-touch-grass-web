@@ -9,7 +9,7 @@
     <!--Navbar-->
     <header>
         <div class="logohome">
-        <img src="fixed_GTG_Logo.webp" alt="Fern" width="100px" style="position:absolute; right:0px;">
+        <img src="img/fixed_GTG_Logo.webp" alt="Fern" width="100px" style="position:absolute; right:0px;">
         </div>
         <div class="menu-container">
             <div class="menu-btn" onclick="toggleMenu(this)">
@@ -42,26 +42,15 @@
     <div id="eola" class="trail-section">
 
     <!-- THINGLINK EMBED (appears ONCE a park is selected) -->
-    <!--
-    <div class="thinglink-wrapper">
-        <iframe
-        width="960"
-        height="480"
-        data-original-width="8000"
-        data-original-height="4000"
-        src="https://www.thinglink.com/view/scene/2036229862762480102"
-        type="text/html"
-        style="border: none;"
-        webkitallowfullscreen
-        mozallowfullscreen
-        allowfullscreen
-        scrolling="no">
-        </iframe>
-        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
-    </div>
-    -->
-    
-    <h2>Lake Eola Park</h2>
+
+    <section class="thinklink-bg">
+        <div id="eola-thinglink" class="thinglink-wrapper">
+            <p>Loading ThinkLink</p>
+        </div>
+    </section>
+
+
+    <h2 class="trail-header">Lake Eola Park</h2>
 
     <!-- TABS -->
     <div class="tab-container">
@@ -69,6 +58,7 @@
         <div class="tab" onclick="switchTab(event, 'eola-flora')">Flora & Fauna</div>
         <div class="tab" onclick="switchTab(event, 'eola-activities')">Activities</div>
         <div class="tab" onclick="switchTab(event, 'eola-achievements')">Achievements</div>
+        <div class="tab" onclick="switchTab(event, 'eola-video')">Video</div>
     </div>
 
     <!-- TAB CONTENT: OVERVIEW (restored original text) -->
@@ -217,33 +207,42 @@
         <li>Touch Grass I - Complete All Lake Eola Badges</li>
         </ul>
     </div>
+
+    <!-- TAB CONTENT: Video -->
+    <div id="eola-video" class="tab-content">
+        <h3>Video</h3>
+        <video controls width="100%">
+            <source src="img/vid-lakeeola-v3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
+
+    <br><br><br>
+    <button class="brochureButton" onclick="printImage('img/Lake Eola 1.png')">Print Brochure Side 1</button>
+    <button class="brochureButton" onclick="printImage('img/Lake Eola 2.png')">Print Brochure Side 2</button>
+    </div>
+
+
 
     <!-- ========== ARBORETUM SECTION (BLANK TABS) ========== -->
 
     <div id="arboretum" class="trail-section">
-    <!--
-    <div class="thinglink-wrapper">
-        <iframe
-        width="960"
-        height="480"
-        data-original-width="8000"
-        data-original-height="4000"
-        src="https://www.thinglink.com/view/scene/2036229862762480102"
-        style="border: none;"
-        allowfullscreen>
-        </iframe>
-        <script async src="//cdn.thinglink.me/jse/responsive.js"></script>
-    </div>
-    -->
+    
+    <section class="thinklink-bg">
+        <div id="arb-thinglink" class="thinglink-wrapper">
+            <p>Loading ThinkLink</p>
+        </div>
+    </section>
 
-    <h2>UCF Arboretum Trail</h2>
+
+    <h2 class="trail-header">UCF Arboretum Trail</h2>
 
     <div class="tab-container">
         <div class="tab active" onclick="switchTab(event, 'arb-overview')">Overview</div>
         <div class="tab" onclick="switchTab(event, 'arb-flora')">Flora & Fauna</div>
         <div class="tab" onclick="switchTab(event, 'arb-activities')">Activities</div>
         <div class="tab" onclick="switchTab(event, 'arb-achievements')">Achievements</div>
+        <div class="tab" onclick="switchTab(event, 'arb-video')">Video</div>
     </div>
 
     <!-- TAB CONTENT: OVERVIEW (restored original text) -->
@@ -453,6 +452,19 @@ Outside of the Wildflower Loop, The Arboretum has many interesting facilities an
             </li>
         </ul>
     </div>
+
+    <!-- TAB CONTENT: Video -->
+    <div id="arb-video" class="tab-content">
+        <h3>Video</h3>
+        <video controls width="100%">
+            <source src="img/vid-arboretum-v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <br><br><br>
+    <button class="brochureButton" onclick="printImage('img/Lake Eola 1.png')">Print Brochure Side 1</button>
+    <button class="brochureButton" onclick="printImage('img/Lake Eola 2.png')">Print Brochure Side 2</button>
     </div>
 
 
@@ -490,7 +502,7 @@ Outside of the Wildflower Loop, The Arboretum has many interesting facilities an
     <!--Footer-->
     <footer>
       <div class="logohome">
-        <img src="fern2.webp" alt="Fern" width="50px" style="position:absolute; left:0px;">
+        <img src="img/fern2.webp" alt="Fern" width="50px" style="position:absolute; left:0px;">
         </div>
     <p>&copy; 2025 Go Touch Grass | Explore. Discover. Achieve.</p>
     </footer>

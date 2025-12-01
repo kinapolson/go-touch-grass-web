@@ -15,6 +15,7 @@ header {
     font-family: "Short Stack", cursive;
     font-weight: 400;
     font-style: normal;
+    float: center;
 }
 
 footer {
@@ -25,6 +26,15 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.logohome{
+    position: relative;
+}
+
+.hometext{
+    text-wrap: unset;
+    text-align: center;
 }
 
 
@@ -47,10 +57,7 @@ body {
 .gtgTrailButton {
     text-align: center;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: white;
-    color: #403314;
+    
 }
 
 #transparent-section {
@@ -150,7 +157,7 @@ img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  position: relative;
+  position : relative;
   margin: auto;
 }
 
@@ -376,6 +383,10 @@ img {vertical-align: middle;}
     margin-bottom: 20px;
 }
 
+.ferntrails {
+    float: right;
+}
+
 
 /* achievements.html */
 .header-txt {
@@ -553,5 +564,9 @@ summary img {
   
 .member h2 {
     margin-bottom: 10px;
+}
+
+.member h3 {
+    font-family: "Short Stack", cursive;
 }
     

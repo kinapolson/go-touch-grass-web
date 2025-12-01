@@ -35,6 +35,8 @@ footer {
 .hometext{
     text-wrap: unset;
     text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 
